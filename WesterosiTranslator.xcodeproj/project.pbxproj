@@ -8,22 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		2F751803239DCB1000277077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F751802239DCB1000277077 /* AppDelegate.swift */; };
-		2F751805239DCB1000277077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F751804239DCB1000277077 /* SceneDelegate.swift */; };
-		2F751807239DCB1000277077 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F751806239DCB1000277077 /* ViewController.swift */; };
+		2F751807239DCB1000277077 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F751806239DCB1000277077 /* MainVC.swift */; };
 		2F75180A239DCB1000277077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F751808239DCB1000277077 /* Main.storyboard */; };
 		2F75180C239DCB1200277077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F75180B239DCB1200277077 /* Assets.xcassets */; };
 		2F75180F239DCB1200277077 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F75180D239DCB1200277077 /* LaunchScreen.storyboard */; };
+		2F751818239DCD6A00277077 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F751817239DCD6A00277077 /* Networking.swift */; };
+		2F75181B239DCD9800277077 /* Valyrian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F75181A239DCD9800277077 /* Valyrian.swift */; };
+		2F75181D239DCDAC00277077 /* WesterosiLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F75181C239DCDAC00277077 /* WesterosiLanguage.swift */; };
+		2F75181F239DCDD200277077 /* Dothraki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F75181E239DCDD200277077 /* Dothraki.swift */; };
+		2F751825239DD64A00277077 /* LanguageTranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F751823239DD64A00277077 /* LanguageTranslateViewController.swift */; };
+		2F751826239DD64A00277077 /* LanguageTranslateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F751824239DD64A00277077 /* LanguageTranslateViewController.xib */; };
+		2F751828239DD6A000277077 /* LanguageTranslateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F751827239DD6A000277077 /* LanguageTranslateViewModel.swift */; };
+		2F75182D239DF2B300277077 /* URLSession+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F75182C239DF2B300277077 /* URLSession+Exts.swift */; };
+		2F75182F239DF50200277077 /* TranslateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F75182E239DF50200277077 /* TranslateService.swift */; };
+		2F751831239DF57800277077 /* TranslateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F751830239DF57800277077 /* TranslateEndpoint.swift */; };
+		2F751833239DFEBD00277077 /* ResultBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F751832239DFEBD00277077 /* ResultBuilder.swift */; };
+		2F751835239E091800277077 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F751834239E091800277077 /* Translation.swift */; };
+		2F751839239E115300277077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F751838239E115300277077 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F7517FF239DCB1000277077 /* WesterosiTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WesterosiTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F751802239DCB1000277077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F751804239DCB1000277077 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2F751806239DCB1000277077 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F751806239DCB1000277077 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		2F751809239DCB1000277077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F75180B239DCB1200277077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F75180E239DCB1200277077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F751810239DCB1200277077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F751817239DCD6A00277077 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		2F75181A239DCD9800277077 /* Valyrian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valyrian.swift; sourceTree = "<group>"; };
+		2F75181C239DCDAC00277077 /* WesterosiLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WesterosiLanguage.swift; sourceTree = "<group>"; };
+		2F75181E239DCDD200277077 /* Dothraki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dothraki.swift; sourceTree = "<group>"; };
+		2F751823239DD64A00277077 /* LanguageTranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTranslateViewController.swift; sourceTree = "<group>"; };
+		2F751824239DD64A00277077 /* LanguageTranslateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageTranslateViewController.xib; sourceTree = "<group>"; };
+		2F751827239DD6A000277077 /* LanguageTranslateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTranslateViewModel.swift; sourceTree = "<group>"; };
+		2F75182C239DF2B300277077 /* URLSession+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Exts.swift"; sourceTree = "<group>"; };
+		2F75182E239DF50200277077 /* TranslateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateService.swift; sourceTree = "<group>"; };
+		2F751830239DF57800277077 /* TranslateEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateEndpoint.swift; sourceTree = "<group>"; };
+		2F751832239DFEBD00277077 /* ResultBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBuilder.swift; sourceTree = "<group>"; };
+		2F751834239E091800277077 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		2F751838239E115300277077 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +64,7 @@
 		2F7517F6239DCB1000277077 = {
 			isa = PBXGroup;
 			children = (
+				2F751838239E115300277077 /* SceneDelegate.swift */,
 				2F751801239DCB1000277077 /* WesterosiTranslator */,
 				2F751800239DCB1000277077 /* Products */,
 			);
@@ -56,15 +81,58 @@
 		2F751801239DCB1000277077 /* WesterosiTranslator */ = {
 			isa = PBXGroup;
 			children = (
-				2F751802239DCB1000277077 /* AppDelegate.swift */,
-				2F751804239DCB1000277077 /* SceneDelegate.swift */,
-				2F751806239DCB1000277077 /* ViewController.swift */,
 				2F751808239DCB1000277077 /* Main.storyboard */,
+				2F751806239DCB1000277077 /* MainVC.swift */,
+				2F751836239E0E1A00277077 /* Translate */,
+				2F751819239DCD8D00277077 /* Model */,
+				2F751816239DCD5700277077 /* Shared */,
+				2F751802239DCB1000277077 /* AppDelegate.swift */,
 				2F75180B239DCB1200277077 /* Assets.xcassets */,
 				2F75180D239DCB1200277077 /* LaunchScreen.storyboard */,
 				2F751810239DCB1200277077 /* Info.plist */,
 			);
 			path = WesterosiTranslator;
+			sourceTree = "<group>";
+		};
+		2F751816239DCD5700277077 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2F75182B239DF29D00277077 /* Extensions */,
+				2F751817239DCD6A00277077 /* Networking.swift */,
+				2F75182E239DF50200277077 /* TranslateService.swift */,
+				2F751830239DF57800277077 /* TranslateEndpoint.swift */,
+				2F751832239DFEBD00277077 /* ResultBuilder.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2F751819239DCD8D00277077 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F75181A239DCD9800277077 /* Valyrian.swift */,
+				2F75181C239DCDAC00277077 /* WesterosiLanguage.swift */,
+				2F75181E239DCDD200277077 /* Dothraki.swift */,
+				2F751834239E091800277077 /* Translation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F75182B239DF29D00277077 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2F75182C239DF2B300277077 /* URLSession+Exts.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2F751836239E0E1A00277077 /* Translate */ = {
+			isa = PBXGroup;
+			children = (
+				2F751823239DD64A00277077 /* LanguageTranslateViewController.swift */,
+				2F751824239DD64A00277077 /* LanguageTranslateViewController.xib */,
+				2F751827239DD6A000277077 /* LanguageTranslateViewModel.swift */,
+			);
+			path = Translate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F75180F239DCB1200277077 /* LaunchScreen.storyboard in Resources */,
+				2F751826239DD64A00277077 /* LanguageTranslateViewController.xib in Resources */,
 				2F75180C239DCB1200277077 /* Assets.xcassets in Resources */,
 				2F75180A239DCB1000277077 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +207,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F751807239DCB1000277077 /* ViewController.swift in Sources */,
+				2F75182F239DF50200277077 /* TranslateService.swift in Sources */,
+				2F751807239DCB1000277077 /* MainVC.swift in Sources */,
+				2F751831239DF57800277077 /* TranslateEndpoint.swift in Sources */,
+				2F751825239DD64A00277077 /* LanguageTranslateViewController.swift in Sources */,
 				2F751803239DCB1000277077 /* AppDelegate.swift in Sources */,
-				2F751805239DCB1000277077 /* SceneDelegate.swift in Sources */,
+				2F751839239E115300277077 /* SceneDelegate.swift in Sources */,
+				2F751833239DFEBD00277077 /* ResultBuilder.swift in Sources */,
+				2F75181B239DCD9800277077 /* Valyrian.swift in Sources */,
+				2F75181F239DCDD200277077 /* Dothraki.swift in Sources */,
+				2F751818239DCD6A00277077 /* Networking.swift in Sources */,
+				2F751828239DD6A000277077 /* LanguageTranslateViewModel.swift in Sources */,
+				2F75181D239DCDAC00277077 /* WesterosiLanguage.swift in Sources */,
+				2F75182D239DF2B300277077 /* URLSession+Exts.swift in Sources */,
+				2F751835239E091800277077 /* Translation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tylerpoland.WesterosiTranslator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +392,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tylerpoland.WesterosiTranslator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

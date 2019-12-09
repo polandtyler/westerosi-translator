@@ -8,30 +8,34 @@
 
 import UIKit
 
-class LanguageTranslateViewController: KeyboardAvoidingViewController {
+class LanguageTranslateViewController: UIViewController {
     lazy private var viewModel: LanguageTranslateViewModel = {
         return LanguageTranslateViewModel()
     }()
-    var language: LanguageType?
-    var translatedText: String?
-
+    var language: LanguageType
+    
+    init(language: LanguageType) {
+        self.language = language
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "\(language.readableString) Translator"
         
         viewModel.updateUI = { [weak self] () in
             guard let self = self else { return }
             DispatchQueue.main.async {
-                self.updateView()
+                self.translatedTextOutputLabel.text = self.viewModel.translationText
             }
         }
     }
-
-    func updateView() {
-        guard let newText = self.translatedText else { return }
-        self.translatedTextOutputLabel.text = newText
-    }
     
-    
+    //MARK: Outlets
     @IBOutlet weak var translateTextTitleLabel: UILabel! {
         didSet {
             translateTextTitleLabel.text = "Text to translate"
@@ -40,22 +44,32 @@ class LanguageTranslateViewController: KeyboardAvoidingViewController {
     @IBOutlet weak var inputTextView: UITextField!
     @IBOutlet weak var translatedTextTitleLabel: UILabel! {
         didSet {
-            guard let language = language else { return }
             translatedTextTitleLabel.text = "\(language.readableString):"
-            translatedTextTitleLabel.isHidden = translatedTextOutputLabel.text == ""
         }
     }
-    @IBOutlet weak var translatedTextOutputLabel: UILabel! {
+    @IBOutlet weak var translatedTextOutputLabel: UILabel!
+    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView! {
         didSet {
-            translatedTextOutputLabel.isHidden = translatedTextOutputLabel.text == ""
+            loadingSpinner.hidesWhenStopped = true
         }
     }
     
+    //MARK: Actions
     @IBAction func translateButtonPressed(_ sender: Any) {
-        guard let text = inputTextView.text, let language = self.language else {
+        guard let text = inputTextView.text else {
             /* show some kind of user error and then */return
         }
-        viewModel.performTranslation(with: text, language: language)
+        loadingSpinner.isHidden = false
+        loadingSpinner.startAnimating()
+        
+        viewModel.performTranslation(with: text, language: language) { success, error in
+            if !success {
+                let alertVc = UIAlertController(title: "Error", message: "Unable to perform translation. Error: \(error ?? "")", preferredStyle: .alert)
+                alertVc.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alertVc, animated: true, completion: nil)
+            }
+            self.loadingSpinner.stopAnimating()
+        }
     }
     
 }

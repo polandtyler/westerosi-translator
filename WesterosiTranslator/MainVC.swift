@@ -15,16 +15,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func dothrakiButtonWasTapped(_ sender: Any) {
-        let vc = LanguageTranslateViewController()
-        vc.language = .dothraki
-        present(vc, animated: true, completion: nil)
+        let vc = LanguageTranslateViewController(language: .dothraki)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
     @IBAction func valyrianButtonWasTapped(_ sender: Any) {
-        let vc = LanguageTranslateViewController()
-        vc.language = .highValyrian
-        present(vc, animated: true, completion: nil)
+        let vc = LanguageTranslateViewController(language: .highValyrian)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
